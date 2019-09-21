@@ -1,0 +1,15 @@
+doctype html
+html
+    head
+        title="Hello Pug"
+    body
+        include first-header.pug
+        if(user)
+            h2 Hi #{user.name}
+            h3=name
+            p.greetings#people I am rendered from Pug! Sending greetings from #{name}
+            div.container.column.main#division(width="100",height="100")
+                a(href=url)  URL
+        else
+            a(href='/sign_up') Sign Up!
+        include first-footer.pug

@@ -1,0 +1,17 @@
+doctype html
+html
+    head
+        meta(charset="utf-8")
+        meta(name="description", content="expressjs pug")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title="Google Login via Pug"
+    body
+        div.container
+            h1 Google fake login using ExpressJS and Pug
+            form(action="http://localhost:3000/auth/google/logged", method="get")
+                input(type="text", name="first_name", placeholder="First Name")
+                br
+                input(type="text", name="last_name", placeholder="Last Name")
+                br
+                input(type="submit", name="submitbtn", value="submit")
+                input(type="reset", name="resetbtn", value="reset")
