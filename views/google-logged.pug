@@ -6,9 +6,13 @@ html
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
         title="Google Login via Pug"
     body
-        div.container
-            h1 You are now fake-logged into your Google Account
-            h2 Hi #{user.f_name} #{user.l_name}
-            p You logged in, congrats !!!
-            p In case of questions drop your mail 
-                a(href='mailto:info@sunliss.eu') here
+        if(user.f_name && user.l_name)
+            div.container
+                h1 You are now fake-logged into your Google Account
+                h2 Hi #{user.f_name} #{user.l_name}
+                p You logged in, congrats !!!
+                p In case of questions drop your mail 
+                    a(href='mailto:info@sunliss.eu') here
+        else
+            h1(style='color: red') First name and Last name fields cannot be blank !
+            include google-login.pug
